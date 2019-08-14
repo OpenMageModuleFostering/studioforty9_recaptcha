@@ -72,9 +72,13 @@
                             <children>
                                 <config>
                                     <children>
-                                        <studioforty9_recaptcha translate="title" module="studioforty9_recaptcha">
-                                            <title>ReCaptcha Configuration Settings</title>
-                                        </studioforty9_recaptcha>
+                                        <google>
+                                            <children>
+                                                <studioforty9_recaptcha translate="title" module="studioforty9_recaptcha">
+                                                    <title>ReCaptcha Configuration Settings</title>
+                                                </studioforty9_recaptcha>
+                                            </children>
+                                        </google>
                                     </children>
                                 </config>
                             </children>
