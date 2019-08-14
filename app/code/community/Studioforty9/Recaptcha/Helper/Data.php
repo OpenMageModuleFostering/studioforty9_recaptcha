@@ -139,6 +139,7 @@ class Studioforty9_Recaptcha_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getRedirectUrl()
     {
+        /** @var Mage_Core_Model_Session $_session */
         $_session = Mage::getSingleton('core/session');
 
         if (! $_session->hasVisitorData() && !$_session->hasLastUrl()) {
