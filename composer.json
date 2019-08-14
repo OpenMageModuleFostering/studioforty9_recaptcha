@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Studioforty9_Recaptcha",
+    "type": "magento-module",
+    "license": "BSDL",
+    "homepage": "",
+    "description": "Google reCAPTCHA for the Contacts page form.",
+    "authors": [
+    {
+        "name": "StudioForty9",
+        "email": "info@studioforty9.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
