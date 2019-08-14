@@ -5,9 +5,9 @@
  * @category  Studioforty9
  * @package   Studioforty9_Recaptcha
  * @author    StudioForty9 <info@studioforty9.com>
- * @copyright 2014 StudioForty9 (http://www.studioforty9.com)
+ * @copyright 2015 StudioForty9 (http://www.studioforty9.com)
  * @license   https://github.com/studioforty9/recaptcha/blob/master/LICENCE BSD
- * @version   1.0.0
+ * @version   1.1.0
  * @link      https://github.com/studioforty9/recaptcha
  */
 
@@ -73,13 +73,17 @@ class Studioforty9_Recaptcha_Helper_Request extends Mage_Core_Helper_Abstract
         
         $client = $this->getHttpClient();
         $client->setParameterGet($params);
-
-        $response = $client->request('GET');
-        $data = Mage::helper('core')->jsonDecode($response->getBody());
-
         $errors = array();
-        if (array_key_exists('error-codes', $data)) {
-            $errors = $data['error-codes'];
+
+        try {
+            $response = $client->request('GET');
+            $data = Mage::helper('core')->jsonDecode($response->getBody());
+            if (array_key_exists('error-codes', $data)) {
+                $errors = $data['error-codes'];
+            }
+        } catch (Exception $e) {
+            $data = array('success' => false);
+            Mage::logException($e);
         }
 
         return new Studioforty9_Recaptcha_Helper_Response($data['success'], $errors);

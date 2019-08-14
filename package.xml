@@ -1,33 +1,46 @@
 <?xml version="1.0"?>
 <package>
     <name>Studioforty9_Recaptcha</name>
-    <version>1.0.1</version>
-    <stability>stable</stability>
+    <version>1.1.0</version>
+    <stability>devel</stability>
     <license uri="http://opensource.org/licenses/BSD-3-Clause">BSDL</license>
     <channel>community</channel>
     <extends/>
-    <summary>Google reCAPTCHA for the Contacts page form.</summary>
-    <description>&lt;h3&gt;Support and Feature Requests&lt;/h3&gt;&#xD;
+    <summary>Protect your website from spam and abuse while letting real people pass through with ease! </summary>
+    <description>&lt;p&gt;The reCAPTCHA extension uses Google's reCAPTCHA widget (&lt;a href="https://www.google.com/recaptcha/intro/index.html"&gt;read more&lt;/a&gt;) to lower the friction when identifying real people and provide powerful protection against spam.&lt;/p&gt;&#xD;
 &#xD;
-https://github.com/studioforty9/recaptcha/issues&#xD;
+&lt;h2&gt;Support and Feature Requests&lt;/h2&gt;&#xD;
 &#xD;
-&lt;h3&gt;How to Configure&lt;/h3&gt;&#xD;
+&lt;p&gt;Support and feature request are hosted on GitHub please direct any queries there first: &lt;a href="https://github.com/studioforty9/recaptcha/issues"&gt;https://github.com/studioforty9/recaptcha/issues&lt;/a&gt;.&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;If you don't have a GitHub account then you can contact us via our &lt;a href="http://www.studioforty9.com/contact-us"&gt;website&lt;/a&gt;.&lt;/p&gt;&#xD;
+&#xD;
+&#xD;
+&#xD;
+&lt;h2&gt;Features&lt;/h2&gt;&#xD;
+&#xD;
+&lt;p&gt;Add the Google ReCaptcha widget to front-end forms in Magento, we currently support the following forms:&lt;/p&gt;&#xD;
+&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Contact page form&lt;/li&gt;&#xD;
+&lt;li&gt;Product Review form&lt;/li&gt;&#xD;
+&lt;li&gt;Customer Registration form&lt;/li&gt;&#xD;
+&lt;li&gt;Product Send to friend form&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&#xD;
+&lt;h2&gt;Usage&lt;/h2&gt;&#xD;
 &#xD;
 &lt;ol&gt;&#xD;
-&lt;li&gt;Once you've got the module installed, sign into your Google account and visit https://www.google.com/recaptcha.&lt;/li&gt;&#xD;
-&lt;li&gt;Hit the "Get reCAPTCHA" link and you'll be taken to your account overview page. Register a new site by adding a label and any domains you want to allow for this specific reCAPTCHA widget.&lt;/li&gt;&#xD;
-&lt;li&gt;Under 'Adding reCAPTCHA to your site' you should see 'Keys', specifically your 'Site Key' and 'Secret Key', copy and paste both keys into their respective configuration fields under 'System -&gt; Configuration -&gt; Sales -&gt; Google API -&gt; Google ReCaptcha'.&lt;/li&gt;&#xD;
-&lt;li&gt;Copy the /contacts/form.phtml template over to your theme, if you haven't already done so, just above the `buttons-set` div paste in the following code:&lt;/li&gt;&#xD;
-&lt;/ul&gt;&#xD;
-&lt;?php echo $this-&gt;getChildHtml('studioforty9.recaptcha.autorender'); ?&gt;&#xD;
-&#xD;
-&#xD;
-</description>
-    <notes>Tested on Magento versions: 1.8.0.0, 1.8.1.0, 1.9.0.1 and 1.9.1.0</notes>
-    <authors><author><name>StudioForty9</name><user>SF9</user><email>info@studioforty9.com</email></author><author><name>Eoghan O'Brien</name><user>eoghanobrien</user><email>eoghan@eoghanobrien.com</email></author></authors>
-    <date>2014-12-19</date>
-    <time>13:09:31</time>
-    <contents><target name="magecommunity"><dir name="Studioforty9"><dir name="Recaptcha"><dir name="Block"><file name="Autorender.php" hash="7a2e7003a75cff32829adac6ebd2846c"/></dir><dir name="Helper"><file name="Data.php" hash="e3839c00e2837b28193d23e63f533b37"/><file name="Request.php" hash="84f061fe40931b993c339d29d26fceab"/><file name="Response.php" hash="aad903c4cd076ea78f96ddeb179f1b85"/></dir><dir name="Model"><dir name="Observer"><file name="Contacts.php" hash="824d5739d6a854312c20764b10a8762e"/></dir><dir name="Source"><file name="Theme.php" hash="4dd05e3bbce98ee7e4ed3bab33fd3365"/></dir></dir><dir name="Test"><dir name="Block"><file name="Autorender.php" hash="a5e6de4f6f0298bd709cd404d34ccd0e"/></dir><dir name="Config"><file name="Module.php" hash="e4ce75427cf4dd943b9b83a47fdabf58"/></dir><dir name="Helper"><file name="Request.php" hash="efae2d639b27e416e0175fac0e6ac638"/><file name="Response.php" hash="c602e7c60e4ad66ff13bc77bdbb1fba5"/></dir><dir name="Model"><dir name="Observer"><file name="Contacts.php" hash="2d4c043d55d275c6d73530f7937a1ecc"/></dir><dir name="Source"><file name="Theme.php" hash="8da1a1f9317b2407bca042d088c4ce1d"/></dir></dir></dir><dir name="etc"><file name="config.xml" hash="43efbe22717cc133f6bf91ff713764c5"/><file name="system.xml" hash="c9a73cd77c5c0d0c001f1bf848cabaae"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="studioforty9_recaptcha.xml" hash="57f4c8f17f08c04985cd582f4768191e"/></dir><dir name="template"><dir name="studioforty9"><dir name="recaptcha"><file name="autorender.phtml" hash="71a2e1820a9b8e83cba2b3f711cb5eaa"/></dir></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><file name="Studioforty9_Recaptcha.csv" hash="6387abc316e524840fa3b1fcc49dc25d"/></dir></target><target name="mageetc"><dir name="modules"><file name="Studioforty9_Recaptcha.xml" hash="6f8f14cebd2b8681e2631d1c4b7acf0b"/></dir></target></contents>
+&lt;li&gt;Once you've got the module installed, sign into your Google account and visit &lt;a href="https://www.google.com/recaptcha"&gt;https://www.google.com/recaptcha&lt;/a&gt;.&lt;/li&gt;&#xD;
+&lt;li&gt;Hit the &amp;quot;Get reCAPTCHA&amp;quot; link and you'll be taken to your account overview page. Register a new site by adding a label and any domains you want to allow for this specific reCAPTCHA widget.&lt;/li&gt;&#xD;
+&lt;li&gt;Under 'Adding reCAPTCHA to your site' you should see 'Keys', specifically your 'Site Key' and 'Secret Key', copy and paste both keys into their respective configuration fields under 'System -&amp;gt; Configuration -&amp;gt; Sales -&amp;gt; Google API -&amp;gt; Google ReCaptcha'.&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="https://drive.google.com/file/d/0B3hRj4-KZpxMRkJEZ0JFeGNRM2c/view?usp=sharing"&gt;Follow the instructions here.&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ol&gt;</description>
+    <notes>Tested on Magento versions: 1.7.0.2, 1.8.0.0, 1.8.1.0, 1.9.0.1 and 1.9.1.0. See https://travis-ci.org/StudioForty9/Recaptcha for more.</notes>
+    <authors><author><name>StudioForty9</name><user>SF9</user><email>info@studioforty9.com</email></author><author><name>Eoghan O'Brien</name><user>eoghanobrien</user><email>eoghan@studioforty9.com</email></author></authors>
+    <date>2015-02-26</date>
+    <time>21:56:15</time>
+    <contents><target name="magecommunity"><dir name="Studioforty9"><dir name="Recaptcha"><dir name="Block"><file name="Autorender.php" hash="ca9fce4b930fd8b6077d6f3b2f04e3bb"/><file name="Explicit.php" hash="32c6e9255f5599282b24f03fd8891c06"/></dir><dir name="Helper"><file name="Data.php" hash="dbc0892e9c6f1e94f3d99c984d95917e"/><file name="Request.php" hash="375c4cde8c292e2360a909498c620db6"/><file name="Response.php" hash="2017ced9053966ccea2c4d23cd52d8ff"/></dir><dir name="Model"><file name="Observer.php" hash="0d67e5dadc00623dc44789228433394a"/><dir name="Source"><file name="Theme.php" hash="7ebe33c57b125ca2520037e862b57075"/></dir></dir><dir name="etc"><file name="config.xml" hash="49ee7e7b3fa81fb662b408e9b6282e81"/><file name="system.xml" hash="da98d3715a9116ff96b898df1e306ddf"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="studioforty9_recaptcha.xml" hash="ca3b59003d7473a73fc4283606fc21b4"/></dir><dir name="template"><dir name="studioforty9"><dir name="recaptcha"><file name="autorender.phtml" hash="d93df7b156aa90ba2c184606a0149202"/><file name="explicit.phtml" hash="fdab9be006a22da28400400e2c34ff93"/><dir name="samples"><dir name="base"><dir name="contacts"><file name="form.phtml" hash="f14cc54dde83a12cb9bac124127902be"/></dir><dir name="persistent"><dir name="customer"><dir name="form"><file name="register.phtml" hash="c4a6ccf18099d9d47ff55edf78e0f416"/></dir></dir></dir><dir name="review"><file name="form.phtml" hash="f7e8587e72a51b124ff2c2bcfd8e20b4"/></dir><dir name="sendfriend"><file name="send.phtml" hash="2f49f6800e901d1d63362dc5391cd971"/></dir></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><file name="Studioforty9_Recaptcha.csv" hash="6387abc316e524840fa3b1fcc49dc25d"/></dir></target><target name="mageetc"><dir name="modules"><file name="Studioforty9_Recaptcha.xml" hash="4ea774e9a930bddc77ab8d408b81e008"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.3.0</min><max>5.5.99</max></php></required></dependencies>
 </package>

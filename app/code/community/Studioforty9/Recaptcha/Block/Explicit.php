@@ -12,13 +12,13 @@
  */
 
 /**
- * Studioforty9_Recaptcha_Block_Autorender
+ * Studioforty9_Recaptcha_Block_Explicit
  *
  * @category   Studioforty9
  * @package    Studioforty9_Recaptcha
  * @subpackage Block
  */
-class Studioforty9_Recaptcha_Block_Autorender extends Mage_Core_Block_Template
+class Studioforty9_Recaptcha_Block_Explicit extends Mage_Core_Block_Template
 {
     /**
      * Get the reCAPTACHA javascript code.
@@ -31,30 +31,27 @@ class Studioforty9_Recaptcha_Block_Autorender extends Mage_Core_Block_Template
             return '';
         }
 
-        return '<script src="https://www.google.com/recaptcha/api.js"></script>';
+        return '<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>';
     }
 
     /**
-     * Get the reCAPTCHA html code.
+     * Get the recaptcha theme setting.
      *
      * @return string
      */
-    public function getRecaptchaHtml()
+    public function getTheme()
     {
-        /** @var Studioforty9_Recaptcha_Helper_Data $helper */
-        $helper = Mage::helper('studioforty9_recaptcha');
+        return Mage::helper('studioforty9_recaptcha')->getTheme();
+    }
 
-        if (! $helper->isEnabled()) {
-            return '';
-        }
-
-        $html = sprintf(
-            '<div class="g-recaptcha" data-theme="%s" data-sitekey="%s"></div>',
-            $helper->getTheme(),
-            $helper->getSiteKey()
-        );
-
-        return $html;
+    /**
+     * Get the recaptcha site key.
+     *
+     * @return string
+     */
+    public function getSiteKey()
+    {
+        return Mage::helper('studioforty9_recaptcha')->getSiteKey();
     }
 
     /**
