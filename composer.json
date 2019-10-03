@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Studioforty9_Recaptcha",
+    "name": "OpenMageModuleFostering\/Studioforty9_Recaptcha",
     "type": "magento-module",
     "license": "BSDL",
     "homepage": "",
     "description": "Protect your website from spam and abuse while letting real people pass through with ease! ",
     "authors": [
-    {
-        "name": "StudioForty9",
-        "email": "info@studioforty9.com"
-    }
-],
+        {
+            "name": "StudioForty9",
+            "email": "info@studioforty9.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
